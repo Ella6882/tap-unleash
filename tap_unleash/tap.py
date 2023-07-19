@@ -15,7 +15,7 @@ class TapUnleash(Tap):
     name = "tap-unleash"
     config_jsonschema = th.PropertiesList(
         th.Property(
-            "api_token",
+            "api_key",
             th.StringType,
             required=True,
             secret=True,  # Flag config as protected.
