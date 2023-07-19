@@ -19,7 +19,7 @@ class EventsFeatureToggleStream(GenericPersonnelStream):
     """Define custom stream."""
     name = "events_feature_toggle"
     path = "admin/events/"
-    primary_keys = ["featureName"]
+    primary_keys = ["id"]
     replication_key = None
 
 # add all streams that have been defined and 
