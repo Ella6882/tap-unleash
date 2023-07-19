@@ -4,9 +4,7 @@ from __future__ import annotations
 
 from singer_sdk import Tap
 from singer_sdk import typing as th  # JSON schema typing helpers
-import sys
 
-print('PATH', sys.path)
 from tap_unleash.client import UnleashStream
 from tap_unleash.streams import DISCOVER_STREAMS
 

@@ -15,9 +15,9 @@ class GenericPersonnelStream(UnleashStream):
     def schema_filepath(self) -> str:
         return SCHEMAS_DIR / f"{self.name}.json"
 
-class EventsFeatureToggleStream(GenericPersonnelStream):
+class EventsStream(GenericPersonnelStream):
     """Define custom stream."""
-    name = "events_feature_toggle"
+    name = "events"
     path = "admin/events/"
     primary_keys = ["id"]
     replication_key = None
@@ -25,5 +25,5 @@ class EventsFeatureToggleStream(GenericPersonnelStream):
 # add all streams that have been defined and 
 # should be discovered 
 DISCOVER_STREAMS : List[UnleashStream] = [
-    EventsFeatureToggleStream
+    EventsStream
 ]
