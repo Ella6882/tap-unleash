@@ -1,0 +1,28 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: "tap-unleash"
+default_environment: test
+environments:
+- name: test
+plugins:
+  extractors:
+  - name: "tap-unleash"
+    namespace: "tap_unleash"
+    pip_url: -e .
+    capabilities:
+    - state
+    - catalog
+    - discover
+    - about
+    - stream-maps
+    config:
+      start_date: '2023-07-16T00:00:00Z'
+    settings:
+    - name: api_key
+      kind: password
+    - name: api_url
+      kind: password
+  loaders:
+  - name: target-jsonl
+    variant: andyh1203
+    pip_url: target-jsonl
