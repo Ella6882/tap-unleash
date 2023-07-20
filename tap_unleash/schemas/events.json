@@ -56,7 +56,19 @@
                   ],
                   "format":"date-time"
                },
+               "createdBy":{
+                  "type":[
+                     "null",
+                     "string"
+                  ]
+               },               
                "project":{
+                  "type":[
+                     "null",
+                     "string"
+                  ]
+               },
+               "type":{
                   "type":[
                      "null",
                      "string"
