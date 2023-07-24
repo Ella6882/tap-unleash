@@ -24,7 +24,6 @@ class UnleashStream(RESTStream):
         return self.config["api_url"]
 
     records_jsonpath = "$[*]"  # Or override `parse_response`.
-
     # Set this value or override `get_new_paginator`.
     next_page_token_jsonpath = "$.next_page"  # noqa: S105
 
@@ -107,8 +106,11 @@ class UnleashStream(RESTStream):
         Yields:
             Each record from the source.
         """
-        # TODO: Parse response body and return a set of records.
-        yield from extract_jsonpath(self.records_jsonpath, input=response.json())
+        response.raise_for_status()
+        input = response.json()
+        for i, elem in enumerate(input["events"]):
+            elem["eventsId"] = input["events"][i]["id"]
+        yield from extract_jsonpath(self.records_jsonpath, input=input)
 
     def post_process(
         self,

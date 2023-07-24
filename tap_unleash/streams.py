@@ -19,7 +19,7 @@ class EventsStream(GenericStream):
     """Define custom stream."""
     name = "events"
     path = "admin/events/"
-    primary_keys = ["version"] #delierate for testing
+    primary_keys = ["eventsId"] #need to update this
     replication_key = None
 
 # add all streams that have been defined and 

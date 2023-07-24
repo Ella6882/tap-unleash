@@ -36,6 +36,12 @@
                      "string"
                   ]
                },
+               "eventsId":{
+                  "type":[
+                     "null",
+                     "integer"
+                  ]
+               },
                "featureName":{
                   "type":[
                      "null",
