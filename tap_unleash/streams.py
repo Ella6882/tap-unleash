@@ -9,17 +9,17 @@ from tap_unleash.client import UnleashStream
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
-class GenericPersonnelStream(UnleashStream):
+class GenericStream(UnleashStream):
     """Common class leveraging conventions to reduce boilerplate"""
     @property
     def schema_filepath(self) -> str:
         return SCHEMAS_DIR / f"{self.name}.json"
 
-class EventsStream(GenericPersonnelStream):
+class EventsStream(GenericStream):
     """Define custom stream."""
     name = "events"
     path = "admin/events/"
-    primary_keys = ["id"]
+    primary_keys = ["version"] #delierate for testing
     replication_key = None
 
 # add all streams that have been defined and 

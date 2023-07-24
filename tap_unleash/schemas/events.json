@@ -1,12 +1,5 @@
 {
-   "$schema":"http://json-schema.org/schema#",
    "type":"object",
-   "key_properties":[
-      "id"
-   ],
-   "bookmark_properties":[
-      
-   ],
    "properties":{
       "version":{
          "type":[
@@ -61,14 +54,8 @@
                      "null",
                      "string"
                   ]
-               },               
-               "project":{
-                  "type":[
-                     "null",
-                     "string"
-                  ]
                },
-               "type":{
+               "project":{
                   "type":[
                      "null",
                      "string"
@@ -117,61 +104,105 @@
                         "object"
                      ],
                      "properties":{
+                        "id":{
+                           "type":[
+                              "null",
+                              "string"
+                           ]
+                        },
                         "name":{
                            "type":[
                               "null",
                               "string"
                            ]
                         },
-                        "description":{
+                        "title":{
                            "type":[
                               "null",
                               "string"
                            ]
                         },
-                        "type":{
-                           "type":[
-                              "null",
-                              "string"
-                           ]
-                        },
-                        "project":{
-                           "type":[
-                              "null",
-                              "string"
-                           ]
-                        },
-                        "stale":{
+                        "disabled":{
                            "type":[
                               "null",
                               "boolean"
                            ]
                         },
-                        "variants":{
+                        "constraints":{
                            "type":[
                               "null",
                               "array"
-                           ]
-                        },
-                        "createdAt":{
-                           "type":[
-                              "null",
-                              "string"
                            ],
-                           "format":"date-time"
+                           "items":{
+                              "type":[
+                                 "null",
+                                 "object"
+                              ],
+                              "properties":{
+                                 "values":{
+                                    "type":[
+                                       "null",
+                                       "list"
+                                    ]
+                                 },
+                                 "inverted":{
+                                    "type":[
+                                       "null",
+                                       "boolean"
+                                    ]
+                                 },
+                                 "operator":{
+                                    "type":[
+                                       "null",
+                                       "string"
+                                    ]
+                                 },
+                                 "contextName":{
+                                    "type":[
+                                       "null",
+                                       "string"
+                                    ]
+                                 },
+                                 "caseInsensitive":{
+                                    "type":[
+                                       "null",
+                                       "boolean"
+                                    ]
+                                 }
+                              }
+                           }
                         },
-                        "lastSeenAt":{
+                        "parameters":{
                            "type":[
                               "null",
-                              "string"
+                              "array"
                            ],
-                           "format":"date-time"
-                        },
-                        "impressionData":{
-                           "type":[
-                              "null",
-                              "boolean"
-                           ]
+                           "items":{
+                              "type":[
+                                 "null",
+                                 "object"
+                              ],
+                              "properties":{
+                                 "rollout":{
+                                    "type":[
+                                       "null",
+                                       "integer"
+                                    ]
+                                 },
+                                 "stickiness":{
+                                    "type":[
+                                       "null",
+                                       "string"
+                                    ]
+                                 },
+                                 "groupId":{
+                                    "type":[
+                                       "null",
+                                       "string"
+                                    ]
+                                 }
+                              }
+                           }
                         }
                      }
                   }
@@ -187,25 +218,13 @@
                         "object"
                      ],
                      "properties":{
+                        "id":{
+                           "type":[
+                              "null",
+                              "string"
+                           ]
+                        },
                         "name":{
-                           "type":[
-                              "null",
-                              "string"
-                           ]
-                        },
-                        "description":{
-                           "type":[
-                              "null",
-                              "string"
-                           ]
-                        },
-                        "type":{
-                           "type":[
-                              "null",
-                              "string"
-                           ]
-                        },
-                        "project":{
                            "type":[
                               "null",
                               "string"
@@ -217,20 +236,20 @@
                               "boolean"
                            ]
                         },
-                        "variants":{
-                           "type":[
-                              "null",
-                              "array"
-                           ]
-                        },
-                        "createdAt":{
+                        "lastSeenAt":{
                            "type":[
                               "null",
                               "string"
                            ],
                            "format":"date-time"
                         },
-                        "lastSeenAt":{
+                        "archived":{
+                           "type":[
+                              "null",
+                              "boolean"
+                           ]
+                        },
+                        "archivedAt":{
                            "type":[
                               "null",
                               "string"
@@ -242,6 +261,94 @@
                               "null",
                               "boolean"
                            ]
+                        },
+                        "title":{
+                           "type":[
+                              "null",
+                              "string"
+                           ]
+                        },
+                        "disabled":{
+                           "type":[
+                              "null",
+                              "boolean"
+                           ]
+                        },
+                        "constraints":{
+                           "type":[
+                              "null",
+                              "array"
+                           ],
+                           "items":{
+                              "type":[
+                                 "null",
+                                 "object"
+                              ],
+                              "properties":{
+                                 "values":{
+                                    "type":[
+                                       "null",
+                                       "list"
+                                    ]
+                                 },
+                                 "inverted":{
+                                    "type":[
+                                       "null",
+                                       "boolean"
+                                    ]
+                                 },
+                                 "operator":{
+                                    "type":[
+                                       "null",
+                                       "string"
+                                    ]
+                                 },
+                                 "contextName":{
+                                    "type":[
+                                       "null",
+                                       "string"
+                                    ]
+                                 },
+                                 "caseInsensitive":{
+                                    "type":[
+                                       "null",
+                                       "boolean"
+                                    ]
+                                 }
+                              }
+                           },
+                           "parameters":{
+                              "type":[
+                                 "null",
+                                 "array"
+                              ],
+                              "items":{
+                                 "type":[
+                                    "null",
+                                    "object"
+                                 ],
+                                 "properties":{
+                                    "rollout":{
+                                       "type":[
+                                          "null",
+                                          "integer"
+                                       ]
+                                    },
+                                    "stickiness":{
+                                       "type":[
+                                          "null",
+                                          "string"
+                                       ]
+                                    },
+                                    "groupId":{
+                                       "type":[
+                                          "null",
+                                          "string"
+                                       ]
+                                    }
+                                 }
+                              }
+                           }
                         }
                      }
                   }
